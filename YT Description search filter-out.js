@@ -8,12 +8,6 @@
 // @grant        none
 // ==/UserScript==
 
-
-
-
-
-
-
 infiniteLoop();  // start the infinite loop
 
 
@@ -51,6 +45,8 @@ function infiniteLoop() {
     infiniteLoop();
   }, 1000); // ms
 }
+
+
 
 
 
