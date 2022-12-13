@@ -8,6 +8,12 @@
 // @grant        none
 // ==/UserScript==
 
+
+
+
+
+
+
 infiniteLoop();  // start the infinite loop
 
 
@@ -45,8 +51,6 @@ function infiniteLoop() {
     infiniteLoop();
   }, 1000); // ms
 }
-
-
 
 
 
@@ -92,6 +96,7 @@ function printYtFormattedString() {
 				formattedString = formattedString.replace("<span dir=\"auto\" class=\"bold style-scope yt-formatted-string\" style-target=\"bold\">", "");
         formattedString = formattedString.replace("</span><span dir=\"auto\" class=\"style-scope yt-formatted-string\">", "");
         formattedString = formattedString.replace("</span>", "");
+        formattedString = formattedString.replace('<span dir="auto" class="style-scope yt-formatted-string bold" style-target="bold">', "");
 
         // Print the updated string to the console
         console.log(formattedString);
