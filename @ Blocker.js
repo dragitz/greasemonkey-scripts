@@ -4,15 +4,15 @@
 // @description  Prevent pages containing "@" in the url from being loaded
 // ==/UserScript==
 
-function block() {
+function blockPageIfUrlContainsAtSymbol() {
   var currentUrl = window.location.href;
 
-  if (currentUrl.includes('@')) {
+  // Some medium articles might get blocked if we do not add this extra check. 
+  if (!currentUrl.includes('/@') && currentUrl.includes('@')) {
     window.stop();
 
-    document.body.innerHTML = "<h1>Access Denied</h1><p>The URL contains the '@' symbol.</p>";
+    document.body.innerHTML = "<h1>Access Denied</h1><p>The URL contains the '@' symbol without a slash before it.</p>";
   }
 }
 
-// Call the function when the page finishes loading
-window.addEventListener('load', block);
+window.addEventListener('load', blockPageIfUrlContainsAtSymbol);
