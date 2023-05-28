@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         YT Stop unrelated search suggestions
-// @version      1.0
+// @version      1.1
 // @description  Remove "People also watched" and "Previously watched" sections from youtube's search results
-// @match        https://www.youtube.com/*
+// @match        https://www.youtube.com/results?search_query*
 // ==/UserScript==
 
 
